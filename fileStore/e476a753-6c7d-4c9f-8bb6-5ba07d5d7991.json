@@ -1,0 +1,33 @@
+{
+  "name": "MyTask",
+  "uuid": "e476a753-6c7d-4c9f-8bb6-5ba07d5d7991",
+  "complete": true,
+  "suspended": false,
+  "error": false,
+  "aborted": false,
+  "abortError": null,
+  "requeueCount": 0,
+  "retryAttempts": 0,
+  "currentTransition": 1,
+  "states": {
+    "e8fee8f0-43d9-4a06-b33d-e31e71cda323": {
+      "uuid": "e8fee8f0-43d9-4a06-b33d-e31e71cda323",
+      "state": {
+        "count": 10
+      }
+    }
+  },
+  "transitions": {
+    "e933ab03-2912-4ce3-8383-b63ed9e14b04": {
+      "name": "doWork",
+      "uuid": "e933ab03-2912-4ce3-8383-b63ed9e14b04",
+      "row": 1,
+      "complete": true,
+      "error": null,
+      "destination": "bob",
+      "wait": null,
+      "startingState": "e8fee8f0-43d9-4a06-b33d-e31e71cda323",
+      "endingState": null
+    }
+  }
+}

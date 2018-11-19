@@ -1,0 +1,13 @@
+{
+  "name": "bob",
+  "uuid": "f2745c7a-14b2-486d-b5a8-020e38f4bacb",
+  "complete": false,
+  "suspended": false,
+  "error": false,
+  "aborted": false,
+  "abortError": null,
+  "retryAttempts": 0,
+  "currentTransition": 0,
+  "states": {},
+  "transitions": {}
+}

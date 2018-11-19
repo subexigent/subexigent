@@ -1,0 +1,69 @@
+{
+  "name": "bob",
+  "uuid": "86281808-9e82-4108-817c-624fab5cf3a1",
+  "complete": true,
+  "suspended": false,
+  "error": false,
+  "aborted": false,
+  "abortError": null,
+  "retryAttempts": 0,
+  "currentTransition": 2,
+  "states": {
+    "1dc69ea9-7d76-44d1-a7be-0e85d98e0999": {
+      "uuid": "1dc69ea9-7d76-44d1-a7be-0e85d98e0999",
+      "state": {
+        "ok": 1
+      }
+    },
+    "cafa7653-5ad0-491c-999e-967bba9b3259": {
+      "uuid": "cafa7653-5ad0-491c-999e-967bba9b3259",
+      "state": {
+        "ok": 2
+      }
+    },
+    "83cedf83-9baf-4523-b9fc-18fa29dbacd7": {
+      "uuid": "83cedf83-9baf-4523-b9fc-18fa29dbacd7",
+      "state": {
+        "ok": 3
+      }
+    }
+  },
+  "transitions": {
+    "baaab351-9c71-4faa-bc3f-85acbf88fa82": {
+      "uuid": "baaab351-9c71-4faa-bc3f-85acbf88fa82",
+      "name": "bob",
+      "transition": 0,
+      "complete": true,
+      "error": null,
+      "destination": "someTransition",
+      "requeue": false,
+      "wait": 0,
+      "startingState": "1dc69ea9-7d76-44d1-a7be-0e85d98e0999",
+      "endingState": "cafa7653-5ad0-491c-999e-967bba9b3259"
+    },
+    "fff63f17-e0b8-44aa-8768-fe93a1b15ec7": {
+      "uuid": "fff63f17-e0b8-44aa-8768-fe93a1b15ec7",
+      "name": "bob",
+      "transition": 1,
+      "complete": true,
+      "error": null,
+      "destination": "someTransition",
+      "requeue": false,
+      "wait": 0,
+      "startingState": "cafa7653-5ad0-491c-999e-967bba9b3259",
+      "endingState": "83cedf83-9baf-4523-b9fc-18fa29dbacd7"
+    },
+    "4cbce3b7-3cf7-4930-9f62-cd24b6e99574": {
+      "uuid": "4cbce3b7-3cf7-4930-9f62-cd24b6e99574",
+      "name": "bob",
+      "transition": 2,
+      "complete": true,
+      "error": null,
+      "destination": null,
+      "requeue": false,
+      "wait": 0,
+      "startingState": "83cedf83-9baf-4523-b9fc-18fa29dbacd7",
+      "endingState": "83cedf83-9baf-4523-b9fc-18fa29dbacd7"
+    }
+  }
+}

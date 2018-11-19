@@ -1,0 +1,33 @@
+{
+  "name": "crashingTask",
+  "uuid": "1f51d9af-5d70-4d47-8de3-823913ed581f",
+  "complete": false,
+  "suspended": false,
+  "error": true,
+  "aborted": false,
+  "abortError": null,
+  "requeueCount": 0,
+  "retryAttempts": 0,
+  "currentTransition": 0,
+  "states": {
+    "1b2c127b-7397-416e-9a0d-ef0be63f4e59": {
+      "uuid": "1b2c127b-7397-416e-9a0d-ef0be63f4e59",
+      "state": {
+        "count": 20
+      }
+    }
+  },
+  "transitions": {
+    "8a78bd13-fbdc-4738-bd47-15064309ead5": {
+      "name": "doWork",
+      "uuid": "8a78bd13-fbdc-4738-bd47-15064309ead5",
+      "row": 0,
+      "complete": false,
+      "error": {},
+      "destination": "error",
+      "wait": null,
+      "startingState": "1b2c127b-7397-416e-9a0d-ef0be63f4e59",
+      "endingState": "1b2c127b-7397-416e-9a0d-ef0be63f4e59"
+    }
+  }
+}

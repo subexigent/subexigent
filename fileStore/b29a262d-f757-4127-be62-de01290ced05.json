@@ -1,0 +1,44 @@
+{
+  "name": "crashingTask",
+  "uuid": "b29a262d-f757-4127-be62-de01290ced05",
+  "complete": true,
+  "suspended": false,
+  "error": true,
+  "aborted": false,
+  "abortError": null,
+  "requeueCount": 0,
+  "retryAttempts": 1,
+  "currentTransition": 1,
+  "states": {
+    "c19dce75-d4f7-4f67-964a-f09a135d22ce": {
+      "uuid": "c19dce75-d4f7-4f67-964a-f09a135d22ce",
+      "state": {
+        "count": 20
+      }
+    }
+  },
+  "transitions": {
+    "e57a9ab7-fc9f-4509-ba47-926a8397f0b2": {
+      "name": "doWork",
+      "uuid": "e57a9ab7-fc9f-4509-ba47-926a8397f0b2",
+      "row": 0,
+      "complete": true,
+      "error": {},
+      "destination": "error",
+      "wait": null,
+      "startingState": "c19dce75-d4f7-4f67-964a-f09a135d22ce",
+      "endingState": "c19dce75-d4f7-4f67-964a-f09a135d22ce"
+    },
+    "3ea4912a-bdec-4a12-ac7e-34cbe9e9be83": {
+      "name": "doWork",
+      "uuid": "3ea4912a-bdec-4a12-ac7e-34cbe9e9be83",
+      "row": 1,
+      "complete": false,
+      "error": {},
+      "destination": "error",
+      "wait": null,
+      "startingState": "c19dce75-d4f7-4f67-964a-f09a135d22ce",
+      "endingState": "c19dce75-d4f7-4f67-964a-f09a135d22ce"
+    }
+  }
+}

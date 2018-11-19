@@ -1,0 +1,402 @@
+{
+  "name": "basicTask",
+  "uuid": "018b3f77-9539-4076-97d5-38a313ecfabc",
+  "complete": true,
+  "suspended": false,
+  "error": false,
+  "aborted": false,
+  "abortError": null,
+  "requeueCount": 0,
+  "retryAttempts": 0,
+  "currentTransition": 22,
+  "states": {
+    "6dbac57c-5db5-42ab-9af5-8dffa36fbbd4": {
+      "uuid": "6dbac57c-5db5-42ab-9af5-8dffa36fbbd4",
+      "state": {
+        "count": 20
+      }
+    },
+    "b15b84c8-8125-480d-bb12-59332c14a12f": {
+      "uuid": "b15b84c8-8125-480d-bb12-59332c14a12f",
+      "state": {
+        "count": 19
+      }
+    },
+    "14c08843-f3de-4541-a01c-bacaea1ca661": {
+      "uuid": "14c08843-f3de-4541-a01c-bacaea1ca661",
+      "state": {
+        "count": 18
+      }
+    },
+    "66656ccf-d144-46a9-8a7e-b914aec69ff1": {
+      "uuid": "66656ccf-d144-46a9-8a7e-b914aec69ff1",
+      "state": {
+        "count": 17
+      }
+    },
+    "db992d25-7002-425d-85db-f7d255658113": {
+      "uuid": "db992d25-7002-425d-85db-f7d255658113",
+      "state": {
+        "count": 16
+      }
+    },
+    "82ea9e9c-ee00-4be1-845f-7344ad78bf15": {
+      "uuid": "82ea9e9c-ee00-4be1-845f-7344ad78bf15",
+      "state": {
+        "count": 15
+      }
+    },
+    "b0d5cbb0-ccea-4561-8d15-f9ddcbad75e8": {
+      "uuid": "b0d5cbb0-ccea-4561-8d15-f9ddcbad75e8",
+      "state": {
+        "count": 14
+      }
+    },
+    "890fbe26-66b8-4f2c-ac16-eb3c1e9d32fd": {
+      "uuid": "890fbe26-66b8-4f2c-ac16-eb3c1e9d32fd",
+      "state": {
+        "count": 13
+      }
+    },
+    "2e29fb26-03ba-4f12-af84-a9f906afb945": {
+      "uuid": "2e29fb26-03ba-4f12-af84-a9f906afb945",
+      "state": {
+        "count": 12
+      }
+    },
+    "8b7a6ccb-55e5-4f8d-9fa8-fb2f4dbbb6f8": {
+      "uuid": "8b7a6ccb-55e5-4f8d-9fa8-fb2f4dbbb6f8",
+      "state": {
+        "count": 11
+      }
+    },
+    "cd28060f-b069-44dc-9b33-e14e2cc125ea": {
+      "uuid": "cd28060f-b069-44dc-9b33-e14e2cc125ea",
+      "state": {
+        "count": 10
+      }
+    },
+    "b350b750-252c-4b6b-805a-0bd973ab6dd5": {
+      "uuid": "b350b750-252c-4b6b-805a-0bd973ab6dd5",
+      "state": {
+        "count": 9
+      }
+    },
+    "64bd1cc7-563b-4ca0-8112-3d74c57aca8d": {
+      "uuid": "64bd1cc7-563b-4ca0-8112-3d74c57aca8d",
+      "state": {
+        "count": 8
+      }
+    },
+    "d3f70703-f2d7-4690-be26-6478c65112f8": {
+      "uuid": "d3f70703-f2d7-4690-be26-6478c65112f8",
+      "state": {
+        "count": 7
+      }
+    },
+    "071ace08-da44-4b91-8d8f-45681f990de9": {
+      "uuid": "071ace08-da44-4b91-8d8f-45681f990de9",
+      "state": {
+        "count": 6
+      }
+    },
+    "14d0c0fe-a560-4bb6-b002-afb5a09eebcd": {
+      "uuid": "14d0c0fe-a560-4bb6-b002-afb5a09eebcd",
+      "state": {
+        "count": 5
+      }
+    },
+    "1ef9a6f7-c38b-415f-a718-3fce847f40d5": {
+      "uuid": "1ef9a6f7-c38b-415f-a718-3fce847f40d5",
+      "state": {
+        "count": 4
+      }
+    },
+    "50286023-82fd-4e55-8939-d18632f8c3af": {
+      "uuid": "50286023-82fd-4e55-8939-d18632f8c3af",
+      "state": {
+        "count": 3
+      }
+    },
+    "54d16ba9-2292-41f1-9a59-4df83bae3a35": {
+      "uuid": "54d16ba9-2292-41f1-9a59-4df83bae3a35",
+      "state": {
+        "count": 2
+      }
+    },
+    "2fbed877-87be-4743-8dc3-eaaa9fd4748d": {
+      "uuid": "2fbed877-87be-4743-8dc3-eaaa9fd4748d",
+      "state": {
+        "count": 1
+      }
+    },
+    "3caf08b1-feab-4a67-8a8d-2aad5ff2f478": {
+      "uuid": "3caf08b1-feab-4a67-8a8d-2aad5ff2f478",
+      "state": {
+        "count": 0
+      }
+    },
+    "b06aa4ce-839a-4110-b058-dbdd5fe50733": {
+      "uuid": "b06aa4ce-839a-4110-b058-dbdd5fe50733",
+      "state": {
+        "count": 0,
+        "additionalStuff": 47
+      }
+    }
+  },
+  "transitions": {
+    "e99c0ea7-aeee-4fa8-b3b0-f84d8c4d192d": {
+      "name": "doWork",
+      "uuid": "e99c0ea7-aeee-4fa8-b3b0-f84d8c4d192d",
+      "row": 0,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "6dbac57c-5db5-42ab-9af5-8dffa36fbbd4",
+      "endingState": "b15b84c8-8125-480d-bb12-59332c14a12f"
+    },
+    "ca4ba88f-109b-4943-8c9f-3ed05b1369f1": {
+      "name": "doWork",
+      "uuid": "ca4ba88f-109b-4943-8c9f-3ed05b1369f1",
+      "row": 1,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "b15b84c8-8125-480d-bb12-59332c14a12f",
+      "endingState": "14c08843-f3de-4541-a01c-bacaea1ca661"
+    },
+    "b6b95aca-ae6b-4b55-b2c8-deb09c861ce4": {
+      "name": "doWork",
+      "uuid": "b6b95aca-ae6b-4b55-b2c8-deb09c861ce4",
+      "row": 2,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "14c08843-f3de-4541-a01c-bacaea1ca661",
+      "endingState": "66656ccf-d144-46a9-8a7e-b914aec69ff1"
+    },
+    "bd0dda6f-b20a-4f4e-b42f-f772d700c013": {
+      "name": "doWork",
+      "uuid": "bd0dda6f-b20a-4f4e-b42f-f772d700c013",
+      "row": 3,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "66656ccf-d144-46a9-8a7e-b914aec69ff1",
+      "endingState": "db992d25-7002-425d-85db-f7d255658113"
+    },
+    "249f0717-a3ab-4220-abd3-9c58666489fd": {
+      "name": "doWork",
+      "uuid": "249f0717-a3ab-4220-abd3-9c58666489fd",
+      "row": 4,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "db992d25-7002-425d-85db-f7d255658113",
+      "endingState": "82ea9e9c-ee00-4be1-845f-7344ad78bf15"
+    },
+    "2ac7010c-1279-4050-a082-24d7be4395b0": {
+      "name": "doWork",
+      "uuid": "2ac7010c-1279-4050-a082-24d7be4395b0",
+      "row": 5,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "82ea9e9c-ee00-4be1-845f-7344ad78bf15",
+      "endingState": "b0d5cbb0-ccea-4561-8d15-f9ddcbad75e8"
+    },
+    "fa1d1ed8-c675-4e3b-9e23-6ca84b6d9511": {
+      "name": "doWork",
+      "uuid": "fa1d1ed8-c675-4e3b-9e23-6ca84b6d9511",
+      "row": 6,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "b0d5cbb0-ccea-4561-8d15-f9ddcbad75e8",
+      "endingState": "890fbe26-66b8-4f2c-ac16-eb3c1e9d32fd"
+    },
+    "d3cb6e32-eea6-4560-9d00-4a7c7c948f0e": {
+      "name": "doWork",
+      "uuid": "d3cb6e32-eea6-4560-9d00-4a7c7c948f0e",
+      "row": 7,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "890fbe26-66b8-4f2c-ac16-eb3c1e9d32fd",
+      "endingState": "2e29fb26-03ba-4f12-af84-a9f906afb945"
+    },
+    "c5743c73-9c98-41bd-8661-b4b78e93ea5d": {
+      "name": "doWork",
+      "uuid": "c5743c73-9c98-41bd-8661-b4b78e93ea5d",
+      "row": 8,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "2e29fb26-03ba-4f12-af84-a9f906afb945",
+      "endingState": "8b7a6ccb-55e5-4f8d-9fa8-fb2f4dbbb6f8"
+    },
+    "b483c739-b75b-4976-956a-1e7fba452fdc": {
+      "name": "doWork",
+      "uuid": "b483c739-b75b-4976-956a-1e7fba452fdc",
+      "row": 9,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "8b7a6ccb-55e5-4f8d-9fa8-fb2f4dbbb6f8",
+      "endingState": "cd28060f-b069-44dc-9b33-e14e2cc125ea"
+    },
+    "9a611a41-9594-4dc2-b34c-ffc1653c1182": {
+      "name": "doWork",
+      "uuid": "9a611a41-9594-4dc2-b34c-ffc1653c1182",
+      "row": 10,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "cd28060f-b069-44dc-9b33-e14e2cc125ea",
+      "endingState": "b350b750-252c-4b6b-805a-0bd973ab6dd5"
+    },
+    "233769b1-955b-4ec4-992d-d6499a939f12": {
+      "name": "doWork",
+      "uuid": "233769b1-955b-4ec4-992d-d6499a939f12",
+      "row": 11,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "b350b750-252c-4b6b-805a-0bd973ab6dd5",
+      "endingState": "64bd1cc7-563b-4ca0-8112-3d74c57aca8d"
+    },
+    "14275dd3-d1b2-49f9-87f3-e29b09d0d0eb": {
+      "name": "doWork",
+      "uuid": "14275dd3-d1b2-49f9-87f3-e29b09d0d0eb",
+      "row": 12,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "64bd1cc7-563b-4ca0-8112-3d74c57aca8d",
+      "endingState": "d3f70703-f2d7-4690-be26-6478c65112f8"
+    },
+    "dac2cf3c-3629-44bc-bf7d-8eb0b7c16e3e": {
+      "name": "doWork",
+      "uuid": "dac2cf3c-3629-44bc-bf7d-8eb0b7c16e3e",
+      "row": 13,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "d3f70703-f2d7-4690-be26-6478c65112f8",
+      "endingState": "071ace08-da44-4b91-8d8f-45681f990de9"
+    },
+    "ce395d8d-8929-4684-b4e6-631317708dba": {
+      "name": "doWork",
+      "uuid": "ce395d8d-8929-4684-b4e6-631317708dba",
+      "row": 14,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "071ace08-da44-4b91-8d8f-45681f990de9",
+      "endingState": "14d0c0fe-a560-4bb6-b002-afb5a09eebcd"
+    },
+    "e47f97d9-fc2b-4ded-928e-8bf5d964caa8": {
+      "name": "doWork",
+      "uuid": "e47f97d9-fc2b-4ded-928e-8bf5d964caa8",
+      "row": 15,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "14d0c0fe-a560-4bb6-b002-afb5a09eebcd",
+      "endingState": "1ef9a6f7-c38b-415f-a718-3fce847f40d5"
+    },
+    "ece5c1bf-3b2d-41f6-b474-868e15c2ac27": {
+      "name": "doWork",
+      "uuid": "ece5c1bf-3b2d-41f6-b474-868e15c2ac27",
+      "row": 16,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "1ef9a6f7-c38b-415f-a718-3fce847f40d5",
+      "endingState": "50286023-82fd-4e55-8939-d18632f8c3af"
+    },
+    "7bc247b6-1ec6-428d-953b-6975e1efe926": {
+      "name": "doWork",
+      "uuid": "7bc247b6-1ec6-428d-953b-6975e1efe926",
+      "row": 17,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "50286023-82fd-4e55-8939-d18632f8c3af",
+      "endingState": "54d16ba9-2292-41f1-9a59-4df83bae3a35"
+    },
+    "63794c8c-7605-4a2e-8510-9a033855678f": {
+      "name": "doWork",
+      "uuid": "63794c8c-7605-4a2e-8510-9a033855678f",
+      "row": 18,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "54d16ba9-2292-41f1-9a59-4df83bae3a35",
+      "endingState": "2fbed877-87be-4743-8dc3-eaaa9fd4748d"
+    },
+    "215e274f-2494-422f-9454-46bbdb22ec52": {
+      "name": "doWork",
+      "uuid": "215e274f-2494-422f-9454-46bbdb22ec52",
+      "row": 19,
+      "complete": true,
+      "error": null,
+      "destination": "doWork",
+      "wait": null,
+      "startingState": "2fbed877-87be-4743-8dc3-eaaa9fd4748d",
+      "endingState": "3caf08b1-feab-4a67-8a8d-2aad5ff2f478"
+    },
+    "cafdb182-4465-456d-8628-b13f516c7ca9": {
+      "name": "doWork",
+      "uuid": "cafdb182-4465-456d-8628-b13f516c7ca9",
+      "row": 20,
+      "complete": true,
+      "error": null,
+      "destination": "moreWork",
+      "wait": null,
+      "startingState": "3caf08b1-feab-4a67-8a8d-2aad5ff2f478",
+      "endingState": "3caf08b1-feab-4a67-8a8d-2aad5ff2f478"
+    },
+    "c08baa1e-2fde-41cb-9e50-4c71daa42954": {
+      "name": "moreWork",
+      "uuid": "c08baa1e-2fde-41cb-9e50-4c71daa42954",
+      "row": 21,
+      "complete": true,
+      "error": null,
+      "destination": "finishWork",
+      "wait": null,
+      "startingState": "3caf08b1-feab-4a67-8a8d-2aad5ff2f478",
+      "endingState": "b06aa4ce-839a-4110-b058-dbdd5fe50733"
+    },
+    "866b3097-df8e-4e34-8637-bf5db0221720": {
+      "name": "finishWork",
+      "uuid": "866b3097-df8e-4e34-8637-bf5db0221720",
+      "row": 22,
+      "complete": true,
+      "error": null,
+      "destination": "done",
+      "wait": null,
+      "startingState": "b06aa4ce-839a-4110-b058-dbdd5fe50733",
+      "endingState": "b06aa4ce-839a-4110-b058-dbdd5fe50733"
+    }
+  }
+}
