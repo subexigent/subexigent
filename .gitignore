@@ -4,6 +4,7 @@ coverage/
 .idea/
 *.off/
 dist/
+fileStore/
 *.sql
 *.sqlite
 *.log
