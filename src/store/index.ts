@@ -5,9 +5,7 @@
  * @license MIT {@link http://opensource.org/licenses/MIT}
  */
 
-export {Store, SimpleStore,StoredState} from "./Store"
+export {Store,StoredState} from "./Store"
 export {PGStore} from './PgStore'
-// export {FileStore} from './FileStore'
-// export {MemoryStore} from './MemoryStore'
-export {SimpleMemoryStore} from "./SimpleMemoryStore"
-export {SimpleFileStore} from './SimpleFileStore'
+export {MemoryStore} from "./MemoryStore"
+export {FileStore} from './FileStore'

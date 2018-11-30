@@ -1,19 +1,25 @@
+const {onUpdateTrigger} = require('../KnexFuns')
+const table = 'subexigent_state'
+
 exports.up = function(knex, Promise) {
-      return knex.schema.createTable('state_transition', (t) => {
-        t.increments('id').primary()
-        t.dateTime('created_at').defaultTo(knex.raw('now()')).notNull();
-        t.dateTime('updated_at').nullable();
-        t.dateTime('deleted_at').nullable();
-        t.uuid('uuid').defaultTo(knex.raw('uuid_generate_v4()'))
-        t.integer('task_id').unsigned().notNull()
-        t.foreign('task_id').references('task.id').onDelete('CASCADE').onUpdate('CASCADE')
-        t.string('state_name')
-        t.jsonb('initial_state').notNull()
+      return knex.schema.createTable(table, (t) => {
+        // t.increments('id').primary()
+        t.uuid('uuid').defaultTo(knex.raw('uuid_generate_v4()')).primary()
+        t.jsonb('state').notNull()
+        t.uuid('task_uuid').notNull()
+        t.foreign('task_uuid').references('subexigent_task.uuid').onDelete('CASCADE').onUpdate('CASCADE')
+        t.timestamp('created_at').defaultTo(knex.fn.now()).notNull();
+        t.timestamp('updated_at').defaultTo(knex.fn.now()).notNull()
+        t.timestamp('ended_at')
+        t.timestamp('deleted_at').nullable();
       })
+        .then(() => {
+          return knex.raw(onUpdateTrigger(table))
+        })
 
 
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists('state_transition')
+  return knex.schema.dropTableIfExists('subexigent_state')
 };

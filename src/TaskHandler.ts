@@ -17,7 +17,7 @@ interface TaskConfig {
   retryOnError?: boolean
   retryDelay?: number,
   delayMultiplier?: number,
-  retryAttempts?: number
+  retryLimit?: number
 }
 
 export interface Task {
@@ -30,13 +30,15 @@ export class TaskHandler {
   states: TransitionStates
 
   constructor(task: Task){
+
     this.config = {
       name: task.config.name,
       initial: task.config.initial,
       retryOnError: getOr(true, 'config.retryOnError', task ),
       retryDelay: getOr(1000, 'config.retryDelay', task ),
       delayMultiplier: getOr(1.5, 'config.delayMultiplier', task ),
-      retryAttempts: getOr(1, 'config.retryAttempts', task ),
+      retryLimit: getOr(1, 'config.retryLimit', task )
+
     }
 
     this.states = task.states

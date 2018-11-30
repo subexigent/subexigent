@@ -11,3 +11,4 @@ fileStore/
 .DS_Store
 .npmrc
 knexfile.js
+testEnvs.sh

@@ -6,7 +6,7 @@
  */
 
 
-export {Exigency} from './Exigency'
+export {Exigency, TaskHook, ExigencySettings, ExigencyLogger} from './Exigency'
 export {Task, TaskHandler} from './TaskHandler'
 export {PendingTask, TaskController} from './TaskController'
-export {Store, FileStore, PGStore, MemoryStore, SimpleStore, SimpleMemoryStore, SimpleFileStore} from "./store";
+export {Store, PGStore,MemoryStore, FileStore} from "./store";

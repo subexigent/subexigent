@@ -5,9 +5,7 @@
  * @license MIT {@link http://opensource.org/licenses/MIT}
  */
 
-import {Exigency, FileStore, MemoryStore, SimpleFileStore, SimpleMemoryStore} from "../src";
-import {PendingTask, TaskHandler} from "../src_off";
-
+import {Exigency, FileStore, MemoryStore, PendingTask, TaskHandler} from "../src";
 
 let taskHandler: TaskHandler = {
   config: {
@@ -15,8 +13,7 @@ let taskHandler: TaskHandler = {
     initial: 'doWork',
     retryOnError: true,
     retryDelay: 1000,
-    rolloffMultiplier: 0.01,
-    retryAttempts: 3
+    delayMultiplier: 0.1
   },
   states: {
     doWork: (State, Metadata) => {
@@ -54,8 +51,8 @@ let faketask: PendingTask = {
 }
 
 describe('Exigency Basic usage', () => {
-  // let localstore = new SimpleFileStore(`${process.cwd()}/fileStore`)
-  let localstore: SimpleMemoryStore = new SimpleMemoryStore()
+  // let localstore = new FileStore(`${process.cwd()}/fileStore`)
+  let localstore: MemoryStore = new MemoryStore()
 
   test('Instantiation', async () => {
     let e = new Exigency(localstore, {debugLogging: false})

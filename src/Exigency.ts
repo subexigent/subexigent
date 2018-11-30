@@ -7,13 +7,15 @@
 
 
 import Bluebird from 'bluebird'
-import {Store, SimpleStore} from './store'
+import {Store} from './store'
 import {TaskRunner} from "./TaskRunner";
+import {TaskRunnerParams, TaskRunner2} from "./TaskRunner2";
 import {PendingTask, TaskController, TaskTypes} from './TaskController'
 import {Task, TaskHandler} from "./TaskHandler";
-import {getOr} from 'lodash/fp'
+import {getOr, isFunction, reduce} from 'lodash/fp'
 
-
+// @ts-ignore
+const uncappedReduce = reduce.convert({ 'cap': false });
 
 export interface TaskStats {
   uuid: string,
@@ -33,27 +35,65 @@ export interface ExigencySettings {
   debugLogging?: boolean
 }
 
+export interface TaskHook {
+  (stats: any, requeueData: any) : any
+}
+
+interface TaskHooks {
+  requeue?: TaskHook,
+  failure?: TaskHook
+  success?: TaskHook
+}
+
+export interface TransitionHook {
+  (data: any): any
+}
+
+interface TransitionHooks {
+  success?: TransitionHook
+  failure?: TransitionHook
+  start?: TransitionHook
+}
+
+
+const fakeTaskHook = () => {
+  return Bluebird.method((stats, requeueData) => {
+    return true
+  })
+}
+const fakeTransitionHook = () => {
+  return Bluebird.method((data) => {
+    return true
+  })
+}
+
 export class Exigency {
 
   private tasks: Map<string, TaskHandler>
-  private readonly Store: SimpleStore
+  private readonly Store: Store
   private readonly Settings: ExigencySettings
   private readonly Logger: ExigencyLogger
-  private requeueHookFn: Function
-  private successHookFn: Function
+  private taskHooks: TaskHooks
+  private transitionHooks: TransitionHooks
 
-  constructor(Store: SimpleStore, Settings: ExigencySettings, Logger?: ExigencyLogger){
+  constructor(Store: Store, Settings: ExigencySettings, Logger?: ExigencyLogger){
     this.Store = Store
     this.Settings = {
       debugLogging: getOr(false, 'debugLogging', Settings)
     }
     this.Logger = Logger || console
     this.tasks = new Map()
-    this.successHookFn = (results) => {
-      return results
+
+    this.taskHooks = {
+      requeue: fakeTaskHook(),
+      success: fakeTaskHook(),
+      failure: fakeTaskHook()
     }
-    this.requeueHookFn = (results) => {
-      return results
+
+    this.transitionHooks = {
+      success: fakeTransitionHook(),
+      failure: fakeTransitionHook(),
+      start:   fakeTransitionHook()
     }
   }
 
@@ -65,25 +105,68 @@ export class Exigency {
   runTask(pendingTask: PendingTask): Bluebird<any> {
     let task = new TaskController(pendingTask)
     let handler: TaskHandler = this.tasks.get(task.name)
-
+    let stats
     if(!handler){
       return Bluebird.reject(new Error('No task found with that name'))
     }
 
-    return new TaskRunner(task, handler, this.Store, this.Settings, this.Logger).run()
+    let runData: TaskRunnerParams = {
+      taskController: task,
+      taskHandler: handler,
+      Store: this.Store,
+      exigencySettings: this.Settings,
+      logger: this.Logger
+    }
+
+    return new TaskRunner2(runData).run()
       .then((result) => {
-        if(result.requeueTask){
-          return this.requeueHookFn(result)
+        stats = result[0]
+        let hook = this.taskHooks[stats.result]
+        if(isFunction(this.taskHooks[stats.result])){
+          return this.taskHooks[stats.result](result[0], result[1])
+            .then(() => {
+              return {ranHook: stats.result, error: null}
+            })
+            .catch((error) => {
+              return {ranHook: stats.result, error: error}
+            })
         }
-        return this.successHookFn(result)
+        return Promise.resolve('true')
+      })
+      .then((result) => {
+
+        return stats
+      })
+      .catch((error) => {
+        return stats
       })
   }
 
-  successHook(hookFn: Function){
-    this.successHookFn = hookFn
+  registerTaskHooks(hooks: TaskHooks){
+    let taskHooks = uncappedReduce((acc, item, key) => {
+      if(acc[key]){
+        if(isFunction(item)) {
+          acc[key] = Bluebird.method(item)
+        } else {
+          throw new Error('Provided Task hooks must be functions...')
+        }
+      }
+      return acc
+    }, this.taskHooks, hooks)
+    this.taskHooks = taskHooks
   }
 
-  requeueHook(hookFn: Function){
-    this.requeueHookFn = hookFn
+  registerTransitionHooks(hooks: TransitionHooks){
+    let transitionHooks = uncappedReduce((acc, item, key) => {
+      if(acc[key]){
+        if(isFunction(item)) {
+          acc[key] = Bluebird.method(item)
+        } else {
+          throw new Error('Provided Transition hooks must be functions...')
+        }
+      }
+      return acc
+    }, this.transitionHooks, hooks)
+    this.transitionHooks = transitionHooks
   }
 }

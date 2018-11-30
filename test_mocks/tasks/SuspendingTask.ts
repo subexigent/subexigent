@@ -11,7 +11,7 @@ export const SuspendingTask: Task = {
   config: {
     name: 'suspendingTask',
     initial: 'doWork',
-    retryAttempts: 1
+    retryLimit: 1
   },
   states: {
     doWork: (State,taskController) => {

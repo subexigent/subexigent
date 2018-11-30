@@ -12,7 +12,8 @@ export const CrashingTask = (retries = 1): Task => {
     config: {
       name: 'crashingTask',
       initial: 'doWork',
-      retryAttempts: retries
+      retryLimit: retries,
+      retryDelay: 1000
     },
     states: {
       doWork: (State,taskController) => {

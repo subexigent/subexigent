@@ -23,6 +23,8 @@ describe('TaskController Usage', () => {
     }
     let td = new TaskController(taskData)
 
+    td.update({retriesRemaining: 1})
+
     expect(td.getName()).toEqual('testTask')
     expect(td.getError()).toBeNull()
 
@@ -31,16 +33,19 @@ describe('TaskController Usage', () => {
     expect(td.getUuid()).toEqual('bob')
     expect(()=>{ td.setUuid('derp')}).toThrow()
 
-    expect(td.setTransitionName('doWork')).toEqual('doWork')
+    // expect(td.setTransitionName('doWork')).toEqual('doWork')
+    expect(td.update({transitionName: 'doWork'}).transitionName).toEqual('doWork')
     expect(td.getTransitionName()).toEqual('doWork')
 
-    expect(td.setCurrentTransition(20)).toEqual(20)
+    // expect(td.setCurrentTransition(20)).toEqual(20)
+    expect(td.update({currentTransition: 20}).currentTransition).toEqual(20)
     expect(td.getCurrentTransition()).toEqual(20)
     expect(td.incrementCurrentTransition()).toEqual(21)
 
     let payload = td.getPayload()
     expect(payload).toEqual({count: 20})
-    td.setState({count: 21})
+    td.update({currentState: {count:21}})
+    // td.setState({count: 21})
     expect(td.getState()).toEqual({count: 21})
   })
 
@@ -61,7 +66,8 @@ describe('TaskController Usage', () => {
     s.count = 200
     expect(s).toEqual({count: 200})
     expect(td.getPayload()).toEqual({count: 20})
-    td.setState(s)
+    // td.setState(s)
+    td.update({currentState: s})
     expect(td.getState()).toEqual({count: 200})
   })
 
